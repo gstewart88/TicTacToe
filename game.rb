@@ -52,7 +52,9 @@ class Game
   end
 
   def acceptable_move?(square)
-    square < 9 && square > -1
+    square < 9 && square > -1 
+    # && ("#{square}" =~ /[[:digit:]]/) == 0
+    # thought I was close with checking if square was a digit. Didnt work though...
   end
 
   def continue_from_error
